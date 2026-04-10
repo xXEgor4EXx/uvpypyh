@@ -1,7 +1,7 @@
-import click
-from peewee import *
+import click # type: ignore
+from peewee import * # type: ignore
 from .dbmodels import db
-from .commands import create_tables, add_user, get_users,get_users_by_name
+from .commands import create_tables, add_user, get_users,get_users_by_name, add_task, get_tasks, delete_task, mark_done, mark_undone
 
 def main() -> None:
     print("Hello from uv-1!")
@@ -24,3 +24,9 @@ cli.add_command(create_tables)
 cli.add_command(add_user)
 cli.add_command(get_users)
 cli.add_command(get_users_by_name)
+cli.add_command(add_task)
+cli.add_command(get_tasks)
+cli.add_command(delete_task)
+cli.add_command(mark_done)
+cli.add_command(mark_undone)
+
